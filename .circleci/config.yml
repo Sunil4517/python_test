@@ -1,18 +1,18 @@
 version: 2.1
 
 orbs:
-  aws-ecr: circleci/aws-ecr@8.1.2
+  aws-ecr: circleci/aws-ecr@7.0.0
 
 workflows:
   build_and_push_image:
     jobs:
       - aws-ecr/build-and-push-image:
-          #account-url: AWS_ECR_ACCOUNT_URL
+          account-url: AWS_ECR_ACCOUNT_URL
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           create-repo: true
           dockerfile: Dockerfile
-          registry-id: AWS_ECR_REGISTRY_ID
+          #registry-id: AWS_ECR_REGISTRY_ID
           path: .
           region: AWS_REGION
           repo: python_test
