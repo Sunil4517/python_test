@@ -11,9 +11,9 @@ workflows:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           create-repo: true
-          dockerfile: Dockerfile
+          dockerfile: dockerfile
           #registry-id: AWS_ECR_REGISTRY_ID
-          path: ..
+          path: .
           region: AWS_REGION
           repo: python_test
           tag: "$CIRCLE_SHA1"
