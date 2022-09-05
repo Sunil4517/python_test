@@ -13,7 +13,7 @@ workflows:
           create-repo: true
           dockerfile: Dockerfile
           #registry-id: AWS_ECR_REGISTRY_ID
-          path: ../
+          path: ..
           region: AWS_REGION
           repo: python_test
           tag: "$CIRCLE_SHA1"
